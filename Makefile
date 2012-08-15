@@ -38,3 +38,9 @@ clean:
 allclean: clean
 	rm -f $(pdf_file)
 
+bibtex:
+	(cd ../bibtex && make vi)
+
+notes:
+	(cd ../../tex/dissertation && make notes)
+
