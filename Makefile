@@ -1,13 +1,13 @@
 target = CESAR2012_paper
 
 source = $(target).tex
-latex_cmd = pdflatex
+latex_cmd = latex
 counter_file = build_counter.txt
 pdf_file = $(target).pdf
 bibtex_file = consolidated_bibtex_file.bib
 bibtex_source = ../bibtex/consolidated_bibtex_source.bib
 
-temporary_files = *.log *.aux *.out *.idx *.ilg *.bbl *.blg *.ind *.lof *.lot *.toc .pdf
+temporary_files = *.log *.aux *.out *.idx *.ilg *.bbl *.blg *.ind *.lof *.lot *.toc .pdf *.dvi
 
 all: $(pdf_file)
 
@@ -23,8 +23,9 @@ $(pdf_file): $(source) Makefile $(bibtex_file)
 		$(latex_cmd) $(target) ; \
 		grep "Rerun to get" $(target).log > /dev/null \
 	) do true ; done
+	dvipdfm $(target).dvi
+	chmod a+r,a-x $(target).pdf
 	@echo "Build `cat $(counter_file)`"
-	chmod a-x,a+r $(pdf_file)
 
 vi:
 	vi $(source)

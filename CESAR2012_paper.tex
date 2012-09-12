@@ -4,19 +4,13 @@
 % Format: LaTeX
 %
 % For information about this file, contact the author by email at
-% joe.loughry@stx.ox.ac.uk, or by telephone: +44 (0)7984147430 (mobile), or
-% +1 303 221 4380 (office).  The time zone is GMT minus 7 hours.
+% joe.loughry@stx.ox.ac.uk, or by telephone: +44 (0)7984147430 (mobile),
+% or +1 303 221 4380 (office).  The time zone is GMT minus 7 hours.
 %
 
 \documentclass{llncs}
-
-% \usepackage[authoryear,sort&compress]{natbib}
-% \usepackage[english,british]{babel}
-% \bibliographystyle{alpha}
-
 \bibliographystyle{splncs}
-
-\usepackage{graphicx}
+\usepackage{epsfig}
 
 %
 % end of preamble
@@ -26,7 +20,8 @@
 \title{Information Asymmetry in Classified Cross Domain System Accreditation}
 \titlerunning{Information Asymmetry in Cross Domain}
 \author{Joe Loughry}
-\institute{Department of Computer Science, University of Oxford}
+\institute{Department of Computer Science, University of Oxford \\
+	Wolfson Building, Parks Road, Oxford, Oxon\ \ OX1 3QD, UK}
 
 \maketitle
 
@@ -50,15 +45,6 @@ level of residual risk might avoid repeated re-testing and redundant
 risk mitigations.  If successful, the unnecessarily high cost of duplicated
 security test and evaluation effort could be greatly reduced.
 \end{abstract}
-
-% \category{J.4}{Social and Behavioral Sciences}{Economics}
-% \category{C.2.0}{Computer-Communication Networks}{General}[Security
-% and protection (e.g., firewalls)]
-% \category{D.2.4}{Software Engineering}{Software/Program Verification}[Validation]
-% \category{J.7}{Computers in Other Systems}{Military}
-% \terms{Economics, Validation}
-% \keywords{Asymmetric knowledge, high assurance, certification and
-% accreditation, cross-domain systems}
 
 \section{Introduction}
 
@@ -117,18 +103,19 @@ equilibrium resulting in lower overall cost.
 
 The purpose of this paper
 is to put forth the idea and validate whether or not working accreditors
-are likely to find the proposed tool useful.
+are likely to find the model and the proposed tool useful.
 
 \section{Cross Domain Systems and Cross Domain Solutions}
 
 Cross domain solutions are needed anywhere that security boundaries exist.
 `In our real-world environment made up of multiple single-level networks---that is,
 relatively isolated networks each of which comprises a security enclave or
-domain at a particular security classification---connectected to the
+domain at a particular security classification---connected to the
 network cloud, it is often necessary to move information across security
 boundaries, and by the Intermediate Value Theorem for Computer Security (CS-IVT),
 at least one multi-level component must exist in the
-cloud'~\cite[\textsection 6.2]{Bell2005b,Loughry2012b}.  A cross domain solution or
+cloud'~\cite[\textsection 6.2]{Bell2005b}, \cite{Loughry2012b}.  A cross domain
+solution or
 \emph{controlled interface} is employed to interconnect systems or networks
 in different security domains, thereby forming a Cross Domain System,
 or CDS~\cite{DCID-6/3a}.
@@ -137,7 +124,7 @@ security domains controlled by different data owners~\cite{Loughry2010a}.
 
 In the most general case, data owners nearly always mistrust one another,
 because the relationship between their security classifications may be
-non-hierarchical, or incommensurable, or simply equipotent, as happens in
+non-hierarch\-ical, or incommensurable, or simply equipotent, as happens in
 international
 installations~\cite{TSOL_2.5_CMW}.  Cross domain solution developers and installers regularly
 encounter situations that have no clear precedent yet need to be resolved;
@@ -160,24 +147,32 @@ security classification rules.
 
 \section{A Model of DAA Interactions Constrained by Different Security Clearances}
 
-Figure~\ref{figure:simplest-possible-CDS} shows a very simple example of
+Figure \ref{figure:simplest-possible-CDS} shows a very simple example of
 a CDS that is nevertheless sufficient to illustrate the problem.
-There is generally no DAA for unclassified systems, so let us say that the
-low side is classified Confidential and the high side is at a higher classification.
-The low-side DAA---by convention, cross domain solution developers habitually
+There is generally no DAA for unclassified systems, so let us imagine that the
+low side is classified Confidential and the high side contains Sensitive Compartmented
+Information (SCI).
+The low-side\footnote{By convention, cross domain solution developers habitually
 refer to data flows as being `low to high' or `high to low' despite the
 fact that the distinction may be a matter of opinion depending on the data
-owner's
-perspective---represents the United States Department of Defence because the information
-on the low side is at a collateral classification, that is, it is classified but not
-protected by additional code words.  But because the high side contains Sensitive
-Compartment Information (SCI), which has a non-hierarchical relationship to
-collateral security classifications, the high-side DAA must represent one of the members of the
-Intelligence Community (IC), for example the National Geospatial-Intelligence
-Agency (NGA).
-Real cross domain systems commonly are more complicated, with multiple data flows in more than one
-direction, more than two endpoints, conditional information flows dependent on content,
-sanitisation, transliteration, and non-hierarchical security classification relationships.
+owner's perspective.} DAA represents one of the military services because the information
+on the low side has a collateral classification, that is, it is classified but not
+protected by additional code words.  But because the high side is SCI,
+which has a non-hierarchical relationship to collateral security classifications,
+the high-side DAA must represent one of the members of the intelligence
+community, for example the National Geospatial-Intelligence Agency (NGA).
+In reality, cross domain systems commonly are more complicated than this example,
+with multiple data flows in more than one direction, more than two endpoints,
+conditional information flows dependent on content, sanitisation, transliteration,
+and non-hierarchical security classification relationships.  The model presented
+in this section, however, is sufficient to reason about cross domain systems in
+collateral, compartmented, and international installations.
+
+\begin{figure}[htbp]
+	\epsfig{file=simplest-possible-CDS.eps,width=\textwidth}
+    \caption{A simple cross-domain system with asymmetric information}
+    \label{figure:simplest-possible-CDS}
+\end{figure}
 
 In our model, DAAs having responsibility for information at different
 classification levels have security clearances and accesses that match
@@ -187,15 +182,6 @@ limited case for two reasons: firstly, because it better reflects the
 intent of security policy irrespective of administrative convenience, and
 secondly because it allows us to analyse the important case of international
 CDS installations, where DAAs most definitely do not share mutual clearances.
-
-\begin{figure}[htbp]
-    % 'trim' specifies how much to remove from left, bottom,
-    % right, and top edges of an A4 size PDF page.
-    \includegraphics[width=\textwidth,trim=0 19cm 2cm 0,clip]{simplest-possible-CDS.pdf}
-    \caption{A simple cross-domain system with asymmetric information.  The low security side
-		is classified CONFIDENTIAL and the high side is Sensitive Compartmented Information (SCI).}
-    \label{figure:simplest-possible-CDS}
-\end{figure}
 
 Consider the following situation.  DAA~1 holds a Confidential security
 clearance and has need-to-know, so is therefore privy to classified
@@ -212,7 +198,7 @@ occurrence $pT_i$ of each, and the value $V$ of the information on the low side 
 perceived by the low side data owner; this
 set of risks that DAA~1 thinks it would be desirable to mitigate is:
 \begin{equation}
-A_1 = \bigcup_i[pT_i\times V]
+A_1 = \bigcup_i\left[pT_i\times V\right]
 \end{equation}
 where $0 \leq pT_i < 1$.
 
@@ -228,7 +214,7 @@ of their probability of occurrence, and the value $V^\prime$ of the information 
 high side as perceived by the high side data owner.  This is the set of
 risks that DAA~2 thinks would be desirable to mitigate:
 \begin{equation}
-A_2 = \bigcup_j[pT_j\times V^\prime]
+A_2 = \bigcup_j\left[pT_j\times V^\prime \right]
 \end{equation} where $0 \leq pT_j < 1$.
 
 $A_2$ is not necessarily a proper superset of $A_1$ or even needs be
@@ -239,6 +225,8 @@ they are seriously different, it might be better to treat them as distinct
 threats---simply because it is DAA~1's own asset on the line.  Similarly, DAA~2
 values high side information independently of DAA~1.
 
+\subsection{The Idea of Residual Risk}
+
 DAA~1 perceives a technology-dependent set of risks $B_1$ that it is
 possible to mitigate, and DAA~2 similarly perceives a set of risks $B_2$
 that is is possible to mitigate.
@@ -247,21 +235,21 @@ possible, it is likely that $B_1 = B_2$, although there is always the
 possibility that DAA~2 is aware of some highly classified risk mitigation
 for a threat that DAA~1 does not even know exists.
 
-\section{The Idea of Residual Risk}
-
 The job of a DAA
 is formally to accept responsibility on behalf of the Principal Accrediting
 Authority (PAA) for the \emph{residual risk} of connecting their classified information system
-to the overall CDS.  Residual risk for each DAA $i$ is defined as the relative complement
-$A_i-B_i$, being the set of risks which it is felt, by that DAA, to be acceptable
-not to mitigate.  The goal of the DAA is always to minimise residual risk.
+to the overall CDS.  Residual risk for each DAA $i$ is defined as the relative complement,
+\begin{equation}\label{equation:individual-residual-risk}
+\left(A_i-B_i\right)\enspace,
+\end{equation}
+that being the set of risks which it is felt, by a particular DAA,
+to be acceptable not to mitigate.  The goal of the DAA is always to minimise residual risk.
 
-This is
-achieved through a combination of choosing the right cross domain solution vendor and product
-based on Certification Test and Evaluation (CT\&E) results, correctly configuring
-the cross domain solution according
+This is achieved through a combination of choosing the right cross domain solution
+vendor and product based on Certification Test and Evaluation (CT\&E) results,
+correctly configuring the cross domain solution according
 to its technical capabilities, and rigorous testing of the CDS before and
-after issuance of Approval-to-Connect (ATC) to verify that the CDS adequately protects
+after issuance of approval-to-connect to verify that the CDS adequately protects
 the security domain of the data owner each DAA represents.  In real installations,
 the PAA responsible for the highest-classification information in the CDS generally is
 responsible for choosing a cross domain solution vendor.  The process of testing a
@@ -271,7 +259,7 @@ in our model, in the granting of an Approval
 to Operate (ATO) from each DAA.  ATO lasts for a limited amount
 of time, usually three years, and is periodically reviewed.
 
-\section{Asymmetric Knowledge}
+\subsection{Asymmetric Knowledge}
 
 To reiterate, by definition a CDS installation always
 spans at least two security domains controlled by different data owners.
@@ -319,55 +307,112 @@ already implemented by another DAA in response to a threat the existence
 of which is above the first DAA's clearance level.\footnote{The related problem
 of highly classified
 threats for which there is no known risk mitigation is a very real one,
-but in the absence of a fix, from the perspective of a higher-cleared
-DAA it is a worry he or she cannot talk about, and from the perspective of a
+but in the absence of a fix, from the perspective of the higher-cleared
+DAA it is a worry he or she cannot talk about, and from the perspective of the
 lower-cleared DAA, ignorance is bliss.}  In another sense, the problem
 is analogous to a covert channel, through which we wish to communicate
 some information in violation of the system security policy~\cite{NCSC-TG-030}.
 In that case, the security policy we need to violate is not that of the CDS, but of
-the security clearances of some of the DAAs.
+the security clearances of at least some of the DAAs.
+
+\subsection{Justification for the Accreditor Model}
 
 Is it even meaningful to talk about a single value for the residual risk
 of a complex CDS interconnecting many different security enclaves, thereby
 exposing data of widely differing perceived---and maybe even objectively
 intrinsic---values to the risk of damage, disclosure, or loss?  It is
 attractive to call the overall residual risk
-\begin{equation}
-R = \sum_i (A_i - B_i)
+\begin{equation}\label{equation:residual-risk}
+R = \sum_i^n \left(A_i - B_i\right)
 \end{equation}
-from the residual risks assessed by each DAA---who is, after all,
-responsible
+from the residual risks in (\ref{equation:individual-residual-risk}) assessed
+by each individual DAA---who is, after all, responsible
 for the safety of data in his or her security enclave---because this metric behaves
 the right way in the intuitive sense that if one DAA feels that the residual
 risk to one enclave is unusually high, it properly increases the overall
 level of risk of the CDS.
 
+We claim that this model is sufficiently powerful to address every situation
+encountered in the field.  To show this, first consider a collateral CDS
+where each accreditor has a security clearance that is one of confidential,
+secret, or top secret.  (The presence of uncleared accreditors, who can be considered
+to have a clearance of `unclassified', such as might be represented by private
+organisations with information security responsibility such as health care providers,
+does not invalidate the relation.)  The highest security clearance of any accreditor
+in the system, and consequently the security classification of the CDS, is called
+`system-high'; the lowest security clearance of any accreditor in the CDS, in our
+model, determines the classification of `system-low'.
+
+In a collateral CDS, each accreditor's security clearance is hierarchically related
+to all of the others such that when any accreditor cleared at system-high is satisfied
+that the residual risk is acceptable, all the accreditors immediately agree because
+they know that the system-high accreditor already knows everything \emph{they} know
+about the threats and vulnerabilities of the CDS.
+
+Now consider the case of a CDS containing SCI.  Here there is no strictly hierarchical
+relationship between the security clearances of accreditors, in practice some of whom
+might have collateral clearances.  System-high floats to SCI (which dominates all
+collateral classifications) with the union
+of all applicable compartments; the definition of system-low remains as before.
+Now if there are any accreditors who are not cleared for SCI, or at least two
+SCI-cleared accreditors who do not share at least one compartment, we are at an
+impasse---at least one accreditor may know of a threat or risk mitigation that
+affects the residual risk of the CDS but is prohibited from communicating that
+information to at least one other accreditor.  In this asymmetric information situation,
+only a limited amount of information can be legally communicated without violating clearance
+or classification rules: the fact that a particular accreditor believes the residual
+risk of the CDS to be too high.\footnote{Interestingly, this leaks information; recall
+the example given earlier of an accreditor who is cleared to know about a highly
+classified threat or risk mitigation.  There are two possibilities: firstly, if the
+accreditor says only that the residual risk is unacceptably high, that statement
+reveals two facts: the existence of a classified threat and the fact that no one
+knows how to mitigate it.  The second possibility is if the accreditor says only that
+the residual risk is acceptable; this leaks the fact of the existence of a classified
+risk mitigation, although not necessarily the fact of a higher classified threat, as
+the risk mitigation may be for a known threat with no known risk mitigation.
+It is an unavoidable leak, however, as the alternative would be for the accreditor
+to remain silent, thereby possibly accepting personal responsibility for a risk
+that is intolerably large.} We do not have a solution for this problem; we have
+merely constructed a model that illustrates the difficulty.  The scenario is drawn
+from personal experience of CDS installations in the field.
+
+Finally, consider the case of international accreditations.  Without loss of generality,
+international accreditors can be treated as SCI-cleared accreditors who have access to
+only one compartment, that compartment being the name of their country.  (The uncleared
+accreditors mentioned previously could equivalently be modelled as foreign country
+accreditors.)  This is consistent with the extension of collateral classifications with
+handling caveats such as NOFORN (`not releasable to foreign nationals') or EYES ONLY.
+The model is therefore complete.
+
 \section{Proposed Solution}
 
 With that out of the way, let us consider the problems of simulating a
-market amongst DAAs who are constrained (in the most general case) from
-communicating freely about their individual assessments of residual risk
-of a CDS because of security classification rules.
-It is a weird sort of market in which participants offer to buy and
+market amongst DAAs who are constrained from communicating freely about
+their individual assessments of residual risk of a CDS because of
+security classification rules.  It is a weird sort of market in which
+participants offer to buy and
 sell commodities that they do not know the value of, although someone else
 does.  Since some of the DAAs are prohibited from describing the exact details
-of a threat or a risk mitigation, or in some important cases the lack of
+of a threat or a risk mitigation, or even the lack of
 any known risk mitigation for a threat with no countermeasure, they must
 in some way signal (in Spence's use of the word) the actual value of the
-residual risk as they perceive it.  The traditional view of signals holds
-that for the signal to be convincing, it must have a high cost to preclude
-dishonest use of signals to gain unfair advantage.  We believe that the cost
+residual risk as they perceive it.
+
+\subsection{Predicting the Behaviour of Accreditors}
+
+The traditional view of signals holds that for a signal to be convincing,
+it must have a high cost to preclude dishonest use of signals to gain
+unfair advantage \cite{Spence1973}.  We believe that the cost
 constraint is satisfied in this adaptation of the model because there
 is negative incentive for cheating when the result of dishonesty---that is,
 to communicate
 a false high reading of the residual risk as perceived by DAA~$k$---would
-either raise the value of $R$, increasing the amount of risk that
+either raise the value of $R$ in (\ref{equation:residual-risk}), increasing
+the amount of risk that
 DAA~$k$ must accept formal responsibility for, or conversely, artificially
 depress the apparent level of risk below what DAA~$k$ knows the true
 value to be, again raising the level of personal risk to DAA~$k$'s own self
 when he or she signs on the dotted line.
-
-\subsection{The Criteria for Signalling Are Met}
 
 The required high cost of signals in this market is made
 manifest by the very real risk that a cleared DAA takes in choosing to
@@ -379,27 +424,52 @@ absent a clearly communicated need-to-know decision from their authorised
 security officer.  The necessary and sufficient criteria for signalling, therefore, are
 met~\cite[pp.\ 499--500 and 367, respectively]{Akerlof1970,Spence1973}.
 
-\subsection{Turf Wars}
+\subsection{Controlling the Schedule of Certification}
 
 One final aspect remains to be examined.  This is the seldom-acknowledged
-incidence of `turf wars' in the DAA community.  We have
+incidence of `turf wars' in the certifier and accreditor communities.  We have
 observed in CT\&E activities, and have anecdotal reports from
 practising DAAs in ST\&E, of prima facie obstructionist behaviour exhibited
 by accreditors and their supporting casts of penetration testers
 against cross domain solution developers and in some cases even against other DAAs.
 The reasons for such activity are not yet clear.  The outcome, however,
-leads almost always in the direction of increased accreditation cost; in
+leads almost always in the direction of increased certification and accreditation cost; in
 the worst case, pathological turf wars could even lead to another well known
 economics result, the tragedy of the commons~\cite{Hardin1968}.
 
+The developer cannot accurately forecast the schedule of certification testing
+during CT\&E because the duration of the penetration testing phase is unknown.
+Very much like covert channel analysis in high-assurance Common Criteria
+evaluations, penetration testing tends to be unbounded in the possible effort
+that could be expended and always is effectively terminated either by funding or
+schedule, not by the completeness of testing.  We found, however, that the
+developer can indirectly control at least
+the duration of penetration testing.  In a study of the successful Defence and
+Intelligence Community Certification and Accreditation Programme (DIACAP)
+certification of a cross domain solution in 2010--11, a causal correlation was
+observed between certifier finding reports and the form of the developer's
+responses.  When the developer responded by disagreeing with the findings of
+the certifier's penetration testers, this invariably prompted a follow-on report
+containing more findings.  When the developer concurred with the findings, no
+further reports of findings appeared \cite{Loughry2012b}.  We believe that this
+mechanism may be usable by the developer to bound the schedule of certification.
+
+% It is believed that the funding source of the certifier's penetration testing
+% effort was looking for a chance to gracefully bring penetration testing to a
+% close without seeming to have yielded to the wishes of the developer.
+
 \section{Summary and Future Work}
 
-The main contribution of this paper is that we have shown
-that the market for residual risk satisfies Spence's criteria for signalling
-in~\cite{Spence1973}.  We have not yet constructed or tested a simulation
-of the DAA market for information, but intend to do that in future work
+The main contribution of this paper is that we have shown that the market for
+residual risk satisfies Spence's criteria for signalling in the presence of
+asymmetric information.  We have not yet constructed or tested a simulation
+of the DAA market for information, but intend to do so in future work
 after receiving feedback from the accreditation community about the
-applicability of the model in this paper.
+applicability of the model described for the first time in this paper.  The
+model is sufficiently general to reason about collateral, compartmented, and
+international accreditations---including unclassified accreditors---thereby
+covering the gamut of situations encountered by cross domain solution developers
+and installers in the field.
 
 A new tool being developed at the University of Oxford, called {\it nihil obstat},
 is designed to facilitate the determination of an equilibrium in the market for
@@ -412,17 +482,14 @@ accreditors at different security classification levels and using them to set a
 % be because they do not have any information to exchange.  Or it
 % could be that they have information, and would like to exchange it
 % but are prohibited by security clearance or security classification
-% rules.  Or they might not want to exchange information.  One reason
-% for that could be turf wars.  Turf wars have been observed in
-% practice.  Reasons for turf wars include\ldots
+% rules.  Or they might not want to exchange information.
 
 \section*{Acknowledgements}
 
 The author wishes to thank his supervisors, including Andrew Martin, who observed
 that the author seemed to be trying to build a covert channel machine, and Ivan
-Fl\'echais, who gave the clearest formulation of risk yet.
-
-This paper is dedicated to the memory of Sister Rosemary Fiori, S.L.
+Fl\'echais, who gave the clearest formulation of risk yet; and the anonymous
+reviewers.
 
 \bibliography{consolidated_bibtex_file}
 
