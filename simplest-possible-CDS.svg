@@ -63,8 +63,8 @@
      objecttolerance="10"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.76"
-     inkscape:cx="360.63193"
+     inkscape:zoom="1"
+     inkscape:cx="295.04877"
      inkscape:cy="849.40231"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
@@ -73,7 +73,7 @@
      inkscape:window-height="719"
      inkscape:window-x="0"
      inkscape:window-y="22"
-     inkscape:window-maximized="0" />
+     inkscape:window-maximized="1" />
   <metadata
      id="metadata7">
     <rdf:RDF>
@@ -101,13 +101,76 @@
            x="307.89474"
            y="144.46745" /></flowRegion><flowPara
          id="flowPara4369">CrossC</flowPara></flowRoot>    <g
-       id="g3928"
-       transform="translate(-8,-12)">
+       id="g3218">
       <g
-         id="g3893">
+         transform="translate(-8,-12)"
+         id="g3915">
+        <path
+           style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:8, 4;stroke-dashoffset:0"
+           d="m 345.99998,30.046393 c 0,243.421057 0,246.052627 0,246.052627"
+           id="path3094"
+           inkscape:connector-curvature="0" />
+        <path
+           inkscape:connector-curvature="0"
+           style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-start:none;marker-end:url(#Arrow1Lend)"
+           d="m 240.41754,148.36218 55,0"
+           id="path3299" />
+        <path
+           inkscape:connector-curvature="0"
+           style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-start:none;marker-end:url(#Arrow1Lend)"
+           d="m 393.25262,148.36218 55,0"
+           id="path4602" />
+        <text
+           xml:space="preserve"
+           style="font-size:32px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;fill:#000000;fill-opacity:1;stroke:none;font-family:Arial;-inkscape-font-specification:Arial"
+           x="270.16013"
+           y="297.73059"
+           id="text2439"
+           sodipodi:linespacing="125%"><tspan
+             sodipodi:role="line"
+             id="tspan2441"
+             x="270.16013"
+             y="297.73059"
+             style="font-size:20px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:Times New Roman;-inkscape-font-specification:Times New Roman">Security Boundary</tspan></text>
+        <g
+           id="g4395"
+           transform="translate(2.0000029,-28.473686)">
+          <rect
+             y="128.15166"
+             x="295.31577"
+             height="97.368423"
+             width="97.368423"
+             id="rect3581"
+             style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0" />
+          <text
+             sodipodi:linespacing="125%"
+             id="text4371"
+             y="158.45695"
+             x="343.41895"
+             style="font-size:32px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Arial;-inkscape-font-specification:Arial"
+             xml:space="preserve"><tspan
+               style="font-size:20px;text-align:center;text-anchor:middle;stroke:none;font-family:Times New Roman;-inkscape-font-specification:Times New Roman"
+               id="tspan4375"
+               y="158.45695"
+               x="343.41895"
+               sodipodi:role="line">Cross</tspan><tspan
+               style="font-size:20px;text-align:center;text-anchor:middle;stroke:none;font-family:Times New Roman;-inkscape-font-specification:Times New Roman"
+               id="tspan4379"
+               y="183.45695"
+               x="343.41895"
+               sodipodi:role="line">Domain</tspan><tspan
+               style="font-size:20px;text-align:center;text-anchor:middle;stroke:none;font-family:Times New Roman;-inkscape-font-specification:Times New Roman"
+               id="tspan4381"
+               y="208.45695"
+               x="343.41895"
+               sodipodi:role="line">Solution</tspan></text>
+        </g>
+      </g>
+      <g
+         id="g3194">
         <g
            id="g3562"
-           transform="translate(2,-28)">
+           transform="translate(-5.9999982,-40)">
           <rect
              y="118.36218"
              x="31.999996"
@@ -255,31 +318,42 @@
         <text
            xml:space="preserve"
            style="font-size:32px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans"
-           x="52.204391"
-           y="56.362183"
+           x="44.204391"
+           y="44.362183"
            id="text5650"><tspan
              sodipodi:role="line"
              id="tspan5652"
-             x="52.204391"
-             y="56.362183"
+             x="44.204391"
+             y="44.362183"
              style="font-size:20px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Times New Roman;-inkscape-font-specification:Times New Roman">Low side network</tspan></text>
-      </g>
-      <g
-         id="g3876">
         <text
            xml:space="preserve"
            style="font-size:32px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans"
-           x="494.32437"
-           y="54.340698"
+           x="60.014938"
+           y="237.37935"
+           id="text5650-17"><tspan
+             sodipodi:role="line"
+             id="tspan5652-4"
+             x="60.014938"
+             y="237.37935"
+             style="font-size:20px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Times New Roman;-inkscape-font-specification:Times New Roman">‘Confidential’</tspan></text>
+      </g>
+      <g
+         id="g3175">
+        <text
+           xml:space="preserve"
+           style="font-size:32px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans"
+           x="486.32437"
+           y="42.340698"
            id="text5650-1"><tspan
              sodipodi:role="line"
              id="tspan5652-7"
-             x="494.32437"
-             y="54.340698"
+             x="486.32437"
+             y="42.340698"
              style="font-size:20px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Times New Roman;-inkscape-font-specification:Times New Roman">High side network</tspan></text>
         <g
            id="g3535"
-           transform="translate(2,-28)">
+           transform="translate(-5.999999,-40)">
           <rect
              y="118.36218"
              x="473.32974"
@@ -354,69 +428,17 @@
                inkscape:connector-curvature="0" />
           </g>
         </g>
-      </g>
-      <g
-         id="g3915">
-        <path
-           style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:8, 4;stroke-dashoffset:0"
-           d="m 345.99998,30.046393 c 0,243.421057 0,246.052627 0,246.052627"
-           id="path3094"
-           inkscape:connector-curvature="0" />
-        <path
-           inkscape:connector-curvature="0"
-           style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-start:none;marker-end:url(#Arrow1Lend)"
-           d="m 240.41754,148.36218 55,0"
-           id="path3299" />
-        <path
-           inkscape:connector-curvature="0"
-           style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-start:none;marker-end:url(#Arrow1Lend)"
-           d="m 393.25262,148.36218 55,0"
-           id="path4602" />
         <text
            xml:space="preserve"
-           style="font-size:32px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;fill:#000000;fill-opacity:1;stroke:none;font-family:Arial;-inkscape-font-specification:Arial"
-           x="270.16013"
-           y="297.73059"
-           id="text2439"
-           sodipodi:linespacing="125%"><tspan
+           style="font-size:32px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans"
+           x="538.16028"
+           y="237.20845"
+           id="text5650-17-0"><tspan
              sodipodi:role="line"
-             id="tspan2441"
-             x="270.16013"
-             y="297.73059"
-             style="font-size:20px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:Times New Roman;-inkscape-font-specification:Times New Roman">Security Boundary</tspan></text>
-        <g
-           id="g4395"
-           transform="translate(2.0000029,-28.473686)">
-          <rect
-             y="128.15166"
-             x="295.31577"
-             height="97.368423"
-             width="97.368423"
-             id="rect3581"
-             style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0" />
-          <text
-             sodipodi:linespacing="125%"
-             id="text4371"
-             y="158.45695"
-             x="343.41895"
-             style="font-size:32px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Arial;-inkscape-font-specification:Arial"
-             xml:space="preserve"><tspan
-               style="font-size:20px;text-align:center;text-anchor:middle;stroke:none;font-family:Times New Roman;-inkscape-font-specification:Times New Roman"
-               id="tspan4375"
-               y="158.45695"
-               x="343.41895"
-               sodipodi:role="line">Cross</tspan><tspan
-               style="font-size:20px;text-align:center;text-anchor:middle;stroke:none;font-family:Times New Roman;-inkscape-font-specification:Times New Roman"
-               id="tspan4379"
-               y="183.45695"
-               x="343.41895"
-               sodipodi:role="line">Domain</tspan><tspan
-               style="font-size:20px;text-align:center;text-anchor:middle;stroke:none;font-family:Times New Roman;-inkscape-font-specification:Times New Roman"
-               id="tspan4381"
-               y="208.45695"
-               x="343.41895"
-               sodipodi:role="line">Solution</tspan></text>
-        </g>
+             id="tspan5652-4-9"
+             x="538.16028"
+             y="237.20845"
+             style="font-size:20px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Times New Roman;-inkscape-font-specification:Times New Roman">‘SCI’</tspan></text>
       </g>
     </g>
   </g>

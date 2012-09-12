@@ -1,0 +1,99 @@
+\begin{thebibliography}{10}
+
+\bibitem{Loughry2012b}
+Loughry, J.:
+\newblock Security Test and Evaluation of Cross Domain Systems.
+\newblock PhD thesis, University of Oxford (Trinity Term 2012)
+
+\bibitem{DCID-6/3a}
+{Director of Central Intelligence}:
+\newblock Protecting sensitive compartmented information within information
+  systems.
+\newblock {DCID} 6/3 (1 August 2000)
+
+\bibitem{Akerlof1970}
+Akerlof, G.A.:
+\newblock The market for `lemons': Quality uncertainty and the market
+  mechanism.
+\newblock Quarterly Journal of Economics \textbf{84}(3) (August 1970)  488--500
+
+\bibitem{Spence1973}
+Spence, M.:
+\newblock Job market signaling.
+\newblock The Quarterly Journal of Economics \textbf{87}(3) (August 1973)
+  355--374
+
+\bibitem{Bell2005b}
+Bell, D.E.:
+\newblock Looking back at the {Bell--LaPadula} model.
+\newblock In: 21st Annual Computer Security Applications Conference, Tucson,
+  Arizona, USA (5--9 December 2005)  337--351
+
+\bibitem{Loughry2010a}
+Loughry, J.:
+\newblock Unsteady ground: Certification to unstable criteria.
+\newblock In: Proceedings of the Second International Conference on Advances in
+  System Testing and Validation Lifecycle, Nice, France (22--27 August 2010)
+
+\bibitem{TSOL_2.5_CMW}
+{Sun Microsystems, Inc.}:
+\newblock Compartmented Mode Workstation Labeling: Encodings Format
+  {DDS-2600-6216-93}.
+\newblock Trusted Solaris 2.5, 2550 Garcia Avenue, Mountain View, California
+  94043-1100 {USA}. (July 1997) Revision {A}.
+
+\bibitem{NIST-SP-800-37}
+{National Institute of Standards and Technology}:
+\newblock Guide for Applying the Risk Management Framework to Federal
+  Information Systems. (February 2010) {NIST} Special Publication 800-37
+  Revision 1.
+
+\bibitem{NIST-SP-800-53A2}
+Ross, R., Johnson, A., Katzke, S., Toth, P., Stoneburner, G., Rogers, G.:
+\newblock Guide for Assessing the Security Controls in Federal Information
+  Systems. (July 2008) {NIST} Special Publication 800-53A.
+
+\bibitem{DIACAP}
+{United States Department of Defense}:
+\newblock {DoD} information assurance certification and accreditation process
+  ({DIACAP}).
+\newblock ASD(NII)/DoD CIO (November 28, 2007) {DoD} Instruction 8510.01.
+
+\bibitem{NIST-SP800-53r3}
+{U.S.\ Department of Commerce, National Institute of Standards and Technology}:
+\newblock {NIST} Special Publication 800-53, Revision 3: Recommended Security
+  Controls \ for Federal Information Systems and Organizations. (June 2009)
+  Final Public Draft.
+
+\bibitem{Flechais2005}
+Flechais, I.:
+\newblock Designing Secure and Usable Systems.
+\newblock PhD thesis, University College, London (2005)
+
+\bibitem{Tockey2004}
+Tockey, S.:
+\newblock Return on Software.
+\newblock Addison--Wesley Professional, Reading, Massachusetts (2004)
+
+\bibitem{Crosby1905}
+Crosby, E.U.:
+\newblock Fire prevention.
+\newblock Annals of the American Academy of Political and Social Science
+  \textbf{26} (1905)  224--238
+
+\bibitem{Stigler1961}
+Stigler, G.J.:
+\newblock The economics of information.
+\newblock Journal of Political Economy \textbf{69}(3) (June 1961)  213--225
+
+\bibitem{NCSC-TG-030}
+{National Computer Security Center}:
+\newblock A Guide to Understanding Covert Channel Analysis of Trusted Systems.
+  (November 1993) NCSC-TG-030 Version 1.
+
+\bibitem{Hardin1968}
+Hardin, G.:
+\newblock The tragedy of the commons.
+\newblock Science \textbf{162}(3859) (13 December 1968)  1243--1248
+
+\end{thebibliography}
