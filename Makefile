@@ -40,8 +40,8 @@ allclean: clean
 	rm -f $(pdf_file) *.bbl
 
 bibtex:
-	(cd ../bibtex && make vi)
+	(cd ../bibtex/ && make vi)
 
 notes:
-	(cd ../../tex/dissertation && make notes)
+	(cd ../notes/ && make notes)
 
