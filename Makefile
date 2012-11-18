@@ -1,4 +1,4 @@
-target = CESAR2012_paper
+target = CESAR2012_slides
 
 source = $(target).tex
 latex_cmd = latex
@@ -7,7 +7,8 @@ pdf_file = $(target).pdf
 bibtex_file = consolidated_bibtex_file.bib
 bibtex_source = ../bibtex/consolidated_bibtex_source.bib
 
-temporary_files = *.log *.aux *.out *.idx *.ilg *.blg *.ind *.lof *.lot *.toc .pdf *.dvi
+temporary_files = *.log *.aux *.out *.idx *.ilg *.blg *.bbl *.nav \
+	*.snm *.ind *.lof *.lot *.toc .pdf *.dvi
 
 all: $(pdf_file)
 
