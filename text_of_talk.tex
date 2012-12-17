@@ -1,0 +1,223 @@
+\item{20121119.2200} Here is the text of my talk.  My speaking slot is thirty minutes long.  Keep
+in mind that this talk was being simultaneously translated into French, so I tried to make it
+clear.
+
+\begin{quotation}
+
+[The title slide is displayed.]
+
+Good afternoon.  My name is Joe Loughry.  I would like to tell you about my doctoral research,
+which looks at the problem of security testing of cross domain systems for handling classified
+information.
+
+[The outline slide is displayed.]
+
+I will start with an introduction to the problem, then some definitions, and then I will tell you
+about my methodology and some important assumptions so you can judge how close this is to reality.
+Then I will tell you about some exciting new results I found.  I will tell you a little bit about
+future directions, and then finish up.
+
+[The introduction slide is displayed.]
+
+I want to tell you first about where this data came from.  I worked for many years for Lockheed
+Martin, on a product called Radiant Mercury, which is a cross domain solution, that is, a box that
+handles highly classified information.  It is used all over the world, mostly by United States
+government and military and intelligence gathering agencies.
+
+A few years ago, someone got the bright idea of selling it internationally.  To do that, they
+needed a Common Criteria security evaluation.  It should have been easy.  This is a very old and
+successful product; it was the very first automated guard in 1992, it has been upgraded
+continuously since then, and it has been well tested, many times, by many different government
+agencies.  Getting a Common Criteria certificate should have been easy.
+
+It wasn't.  We did not get the Common Criteria certificate.  We did not fail testing, but we gave
+up on the documentation required after spending more than a year of time and more than a million
+dollars.  It got me thinking about the problem of certification and accreditation of cross domain
+systems when the security testing criteria are new or have suddenly changed.  This is actually not
+an uncommon situation for cross domain solution developers, because they \emph{always} find
+themselves in situations where no one trusts them.
+
+I studied three examples:
+\begin{itemize}
+	\item the unsuccessful Common Criteria security evaluation in 2006,
+	\item a successful DIACAP security certification of the same product in 2010, and
+	\item an earlier project in 1999 where the goal was to prepare a package of `evaluatable
+		evidence' which was validated, but not evaluated, for an earlier version of the same
+		software product.
+\end{itemize}
+
+[The definitions slide is displayed.]
+
+Cross domain systems and cross domain solutions are interesting because they are always installed
+in an adversarial environment---by definition they are.
+
+A cross domain \emph{solution}, abbreviated CDS, is a hardware or software product that is used to
+interconnect different systems or networks full of classified information.  A cross domain
+\emph{system}, also unfortunately abbreviated CDS, is the system in production.  A cross domain
+system includes the networks connected to it, and the people who operate it, and the people who
+test it, and all the different data owners who do not trust one another.
+
+In the simplest case, a cross domain solution is just a one-in-one-out, high-to-low or low-to-high,
+like an internet router.  But more realistic ones have multiple interfaces, multiple flows in more
+than one direction, they do filtering, sanitisation, and transliteration.  They can even be made to
+lie about sources and methods of intelligence collection.  They are very complex devices.
+
+I am often asked what is the difference between this and a firewall.
+
+[The ISO seven-layer OSI network model slide is displayed.]
+
+Here we have the ISO model of the OSI seven layer network model, all nine layers of it.  A firewall
+filters packets at layer three or four.  An expensive firewall enforces control on the format of
+data at layer seven, stopping SQL injection attacks for example.  But a cross domain solution
+operates up here at layer eight or nine.  It enforces policy.  It looks at the content of data, and
+if it sees any mention of Project X, it stops that communication if the recipient is not cleared to
+receive it.
+
+[Next slide is back to definitions again.]
+
+As I said before, cross domain systems always go into an adversarial environment.  The Navy doesn't
+trust the Air Force.  The Air Force doesn't trust the CIA.  Everybody trusts NSA, but NSA doesn't
+trust anybody.
+
+So these systems get tested extensively.  In the certification phase, they get tested after
+software development.  Does it do what it is supposed to do, and nothing it is not supposed to do?
+Certification testing involves a lot of penetration testing.  It takes a whole year to do.  So it
+is only done when you absolutely have to, when you have made major changes to the software.
+
+But a whole year of testing is not good enough.  These systems handle classified information.  If
+something goes wrong it could cause a war.  So every time one of these systems is installed in the
+field it is tested again, in the particular location and connected to the particular networks, and
+operated by the particular people who will be trained on it.  This is accreditation.
+
+Remember I said that by definition these systems go into environments composed of mutually
+distrustful data owners.  They don't want to connect their systems to someone else.  They don't
+trust those other data owners.  Classified information might leak out.  Malicious code from outside
+might get in.
+
+So these data owners are represented by accreditors.  Accreditors are government employees whose
+job it is to personally accept responsibility for the correct operation of the system.  They won't
+do that until they are satisfied that the cross domain system is secure.
+
+The problem is that accreditors don't like to talk to other accreditors.  They all represent
+different data owners.  They all have classified information that they are sworn to protect.  So
+this causes a problem where every accreditor wants the same or similar security tests to be done.
+The same tests are run over and over again for different accreditors.  This costs time and money,
+and it delays operation of the systems.  Those delays cost time and money.  Sometimes they cost
+lives.
+
+So that's the problem I am trying to solve.  Why does this testing take so much time?
+
+[The methodology slide is displayed.]
+
+So here is how I tried to solve the problem.  I used a grounded theory methodology.  I have access
+to all these project records, a huge pile of data.  Grounded theory is well suited to
+investigations in software engineering, where controlled experiments are expensive and difficult to
+replicate.
+
+Grounded theory is a way of running experiments retrospectively, when you've already got the data
+and you can't collect more.  It starts by looking for distinctive events in the data, then looks
+for repeating events and groups those into categories, from which themes are built.  It is a an old
+and well established methodology, over half a century old.
+
+[The assumptions slide is displayed.]
+
+One important assumption I made is critical to solving the problem.  Accreditors, in my model, are
+only cleared to the level that they need to be.  If they work on confidential systems, they have a
+confidential security clearance.  Only those accreditors who need to work on Top Secret information
+have a Top Secret security clearance.  It is an important assumption for reasons I will get to in a
+few minutes.
+
+[The findings slide is displayed.]
+
+So here are the results I found.  A grounded theory in three parts.  First, I have a model of
+accreditor-to-accreditor communications.  I showed that this communication is equivalent to the job
+market signalling in the economic theories of Spence and Akerlov.  The accreditor communication
+model satisfies all the criteria for reliable signalling in the presence of asymmetric information.
+
+What I mean by asymmetric information is that accreditor A has a certain view of the risk to a
+system from his or her own security clearance.  But accreditor B might be cleared to a different
+level.  He or she might know about classified threats, or classified threat mitigations, that
+accreditor A is not cleared to know about.  So there is asymmetric knowledge.  But all the
+accreditors have to agree to accredit the cross domain system based on the true level of residual
+risk.  But how do they agree on what that is?  They don't like to talk to each other because they
+all have different security clearances.  Today, they solve that problem by all of them running the
+same security tests over and over again.  It would be better if they could share information.  They
+do this by means of signalling.
+
+The second part of my grounded theory builds upon this model.  It is a method for predicting the
+behaviour of accreditors in the presence of asymmetric information.
+
+Specifically, I proved that some undesirable information flows are actually forced.  The accreditor
+communicates information whether he wants to or not, sometimes by his silence.  There is an example
+of this on page 25 in footnote number 4.
+
+In other instances, some desirable information flows are inhibited.  I am still trying to work out
+where all those are.  Read my thesis in a few months if you want to know more.
+
+This is where that assumption I told you about becomes important.  If we follow the Bell and
+LaPadula security policy exactly, as in my assumption that accreditors are cleared only to the
+level they need to be, then the security policy \emph{must} be violated under some conditions.  If
+you relax the security policy slightly, for efficiency, and clear all your accreditors to the
+highest level, so that you can have a pool of accreditors, and any accreditor can work on any
+accreditation, then it actually improves security.  Relax the rules to imporove security.  That is
+a very surprising result.
+
+Finally, I found one more thing in the grounded theory methodology.  That's the thing about
+grounded theory---you never know what you might find in the data.  I found a method by which the
+software developer can control the behaviour of certifiers during the certification phase.  That's
+useful, because certification testing takes a whole year, or half a year.
+
+It's not a large effect, and I found no evidence that the software developer was aware of the fact
+that he could control the behaviour of the certifiers to some extent, but it is there.
+
+[The future work slide is displayed.]
+
+Now for future work.  In economics, the presence of asymmetric information always leads to
+arbitrage.  Is there a market for risk among accreditors?  Could they buy and sell options on the
+true residual risk of a cross domain system?  I am working on a tool at the University of Oxford
+called \emph{nihil obstat} to facilitate accreditor communication.  The goal, as always, is to
+reduce or eliminate the unnecessary re-testing of the same test procedures, the same test cases,
+over and over again for complicated cross domain systems with multiple accreditors.
+
+[The conclusions slide is displayed.]
+
+So, to summarise, I found three things:
+
+\begin{enumerate}
+	\item The accreditor behaviour model, which is re-usable.  I hope others will adopt this model.
+		Use it.  Improve it.
+	\item A method for predicting certain types of accreditor communication.
+	\item A method for controlling the schedule, and hence the cost, of certification testing.
+\end{enumerate}
+
+[The end slide is displayed.]
+
+Thank you.  That's all I have.  Any questions?
+\end{quotation}
+
+\item{20121120.1733 (GMT+1)} Notes after my talk: I spoke through simultaneous translation; the
+moderator advised speaking with pauses for the interpreters to keep up.  I tried to do that.  I
+timed my talk at a good fifteen minutes without the pauses; with the pauses it came nicely to
+twenty or twenty-five minutes with time for questions at the end.
+
+One audience member asked a question I was expecting: `how does the software developer exert
+control over the certification schedule?'.  I answered like this:
+\begin{quotation}
+	You're going to laugh.  Certification testing involves a lot of penetration testing.
+Penetration testers are like covert channel analysts; they never, ever stop.  They will go on
+forever until someone else cuts them off because somebody ran out of money.  Otherwise, penetration
+testing will continue forever.
+
+	Penetration testers work for a while, and then they write up a report of their current findings.
+When the developer gets that report, the developer argues: `this isn't a real finding; this other
+thing was fixed two releases ago; the penetration testers did it wrong; it's working as designed.'
+The developer argues, and the penetration testers respond by going back and writing another report
+full of more findings.  This cycle continues indefinitely.  What I found in the data was evidence
+that if the developer chooses not to argue, but rather accepts the report, acknowledges that the
+penetration testers are a superior form of life, then the penetration testers are happy, they go to
+sleep, and certification proceeds.  Don't argue.  That's the secret to controlling the schedule of
+certification testing.  I told you you would laugh.  But it's true.
+
+	No more questions?  Cool, I have a thesis to write.
+\end{quotation}
+

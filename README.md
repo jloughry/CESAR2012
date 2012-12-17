@@ -5,7 +5,7 @@ C&ESAR 2012 paper
 -----------------
 
 The paper is titled *Information Asymmetry in Classified Cross Domain System Accreditation*
-and is due to be presented at the C&ESAR 2012 conference in Rennes, France in November.
+and was presented at the C&ESAR 2012 conference in Rennes, France.
 
 Build Notes
 -----------
