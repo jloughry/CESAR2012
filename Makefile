@@ -6,18 +6,15 @@ counter_file = build_counter.txt
 pdf_file = $(target).pdf
 bibtex_file = consolidated_bibtex_file.bib
 bibtex_source = ../bibtex/consolidated_bibtex_source.bib
-documentation = README.md
 
 temporary_files = *.log *.aux *.out *.idx *.ilg *.blg *.bbl *.nav \
 	*.snm *.ind *.lof *.lot *.toc .pdf *.dvi
 
-#
-# Note: make requires that we set the value of a variable OUTSIDE any rules.
-#
-
-timestamp = `date +%Y%m%d.%H%M`
+include ../Makefiles/git1.mk
 
 all: $(pdf_file)
+
+include ../Makefiles/git2.mk
 
 $(bibtex_file): $(bibtex_source)
 	cp $(bibtex_source) $(bibtex_file)
@@ -52,14 +49,4 @@ bibtex:
 
 notes:
 	(cd ../notes/ && make notes)
-
-commit:
-	make clean
-	git add .
-	git commit -am "commit from Makefile $(timestamp)"
-	make sync
-
-sync:
-	git pull --rebase
-	git push
 
