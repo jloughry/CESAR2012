@@ -10,11 +10,7 @@ bibtex_source = ../bibtex/consolidated_bibtex_source.bib
 temporary_files = *.log *.aux *.out *.idx *.ilg *.blg *.bbl *.nav \
 	*.snm *.ind *.lof *.lot *.toc .pdf *.dvi
 
-include ../Makefiles/git1.mk
-
 all: $(pdf_file)
-
-include ../Makefiles/git2.mk
 
 $(bibtex_file): $(bibtex_source)
 	cp $(bibtex_source) $(bibtex_file)
@@ -44,9 +40,5 @@ clean:
 allclean: clean
 	rm -f $(pdf_file) *.bbl
 
-bibtex:
-	(cd ../bibtex/ && make vi)
-
-notes:
-	(cd ../notes/ && make notes)
+include common.mk
 
