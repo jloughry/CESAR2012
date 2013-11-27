@@ -10,7 +10,7 @@ bibtex_source = ../bibtex/consolidated_bibtex_source.bib
 temporary_files = *.log *.aux *.out *.idx *.ilg *.blg *.bbl *.nav \
 	*.snm *.ind *.lof *.lot *.toc .pdf *.dvi
 
-all: $(pdf_file)
+all:: $(pdf_file)
 
 $(bibtex_file): $(bibtex_source)
 	cp $(bibtex_source) $(bibtex_file)
@@ -31,10 +31,14 @@ $(pdf_file): $(source) Makefile $(bibtex_file)
 vi:
 	vi $(source)
 
-spell:
+#
+# spell and clean have double colons because they are extended in the common.mk file.
+#
+
+spell::
 	aspell --lang=EN_GB check $(source)
 
-clean:
+clean::
 	rm -f $(temporary_files)
 
 allclean: clean
