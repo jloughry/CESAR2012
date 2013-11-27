@@ -1,4 +1,4 @@
-target = CESAR2012_slides
+target = CESAR2012_paper
 
 source = $(target).tex
 latex_cmd = latex
