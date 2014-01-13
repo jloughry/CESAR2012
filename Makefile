@@ -4,16 +4,11 @@ source = $(target).tex
 latex_cmd = latex
 counter_file = build_counter.txt
 pdf_file = $(target).pdf
-bibtex_file = consolidated_bibtex_file.bib
-bibtex_source = ../bibtex/consolidated_bibtex_source.bib
 
 temporary_files = *.log *.aux *.out *.idx *.ilg *.blg *.bbl *.nav \
 	*.snm *.ind *.lof *.lot *.toc .pdf *.dvi
 
 all:: $(pdf_file)
-
-$(bibtex_file): $(bibtex_source)
-	cp $(bibtex_source) $(bibtex_file)
 
 $(pdf_file): $(source) Makefile $(bibtex_file)
 	@echo $$(($$(cat $(counter_file)) + 1)) > $(counter_file)
