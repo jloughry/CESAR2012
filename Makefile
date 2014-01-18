@@ -12,6 +12,7 @@ all:: $(pdf_file)
 
 $(pdf_file): $(source) Makefile $(bibtex_file)
 	@echo $$(($$(cat $(counter_file)) + 1)) > $(counter_file)
+	make $(bibtex_file)
 	$(latex_cmd) $(source)
 	bibtex $(target)
 	if (grep "Warning" $(target).blg > /dev/null ) then false ; fi
