@@ -1,1 +1,0 @@
-insert 'make $(bibtex_file)' early in build process to work around problem
